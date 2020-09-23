@@ -1,59 +1,59 @@
 export default [
   {
-    1: {
-      question: "At a party do you: ",
-      a: "Interact with many, including strangers",
-      b: "Interact with a few, known to you",
-    },
+    sequenceId: 1,
+    question: "At a party do you: ",
+    a: "Interact with many, including strangers",
+    b: "Interact with a few, known to you",
+    personalityColumn: "extrovertIntrovert",
   },
   {
-    2: {
-      question: "Are you more: ",
-      a: "realistic than speculative",
-      b: "speculative than realistic",
-    },
+    sequenceId: 2,
+    question: "Are you more: ",
+    a: "realistic than speculative",
+    b: "speculative than realistic",
+    personalityColumn: "sensingIntuitive",
   },
   {
-    3: {
-      question: "Is it worse to: ",
-      a: "have your head in the clouds",
-      b: "be in a rut",
-    },
+    sequenceId: 3,
+    question: "Is it worse to: ",
+    a: "have your head in the clouds",
+    b: "be in a rut",
+    personalityColumn: "sensingIntuitive",
   },
   {
-    4: {
-      question: "Are you more impressed by: ",
-      a: "principles",
-      b: "emotions",
-    },
+    sequenceId: 4,
+    question: "Are you more impressed by: ",
+    a: "principles",
+    b: "emotions",
+    personalityColumn: "thinkingFeeling",
   },
   {
-    5: {
-      question: "Are you more drawn to: ",
-      a: "convincing",
-      b: "touching",
-    },
+    sequenceId: 5,
+    question: "Are you more drawn to: ",
+    a: "convincing",
+    b: "touching",
+    personalityColumn: "thinkingFeeling",
   },
   {
-    6: {
-      question: "Do you prefer to work: ",
-      a: "to deadlines",
-      b: "just whenever",
-    },
+    sequenceId: 6,
+    question: "Do you prefer to work: ",
+    a: "to deadlines",
+    b: "just whenever",
+    personalityColumn: "judgingPerceiving",
   },
   {
-    7: {
-      question: "Do you tend to choose: ",
-      a: "rather carefully",
-      b: "somewhat impulsively",
-    },
+    sequenceId: 7,
+    question: "Do you tend to choose: ",
+    a: "rather carefully",
+    b: "somewhat impulsively",
+    personalityColumn: "judgingPerceiving",
   },
   {
-    8: {
-      question: "At parties do you: ",
-      a: "stay late, with increasing energy",
-      b: "Leave early with decreased energy",
-    },
+    sequenceId: 8,
+    question: "At parties do you: ",
+    a: "stay late, with increasing energy",
+    b: "Leave early with decreased energy",
+    personalityColumn: "extrovertIntrovert",
   },
 ];
 
