@@ -18,7 +18,6 @@ export default function personalitytest() {
     if (counter === 7) {
       calculation = calculate(score);
       console.log("Calculation: ", calculation);
-      return;
     }
 
     let scoreTemp = score[column] || 0;
@@ -40,8 +39,8 @@ export default function personalitytest() {
 
   return (
     <div>
-      {calculation ? (
-        <div>{calculation.title.join(" ")}</div>
+      {testObject[counter].submit ? (
+        <input type="button" value="Submit for testing" />
       ) : (
         <div>
           <h1>{`${testObject[counter].question}`}</h1>
