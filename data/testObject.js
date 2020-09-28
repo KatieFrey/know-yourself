@@ -55,6 +55,7 @@ export default [
     b: "Leave early with decreased energy",
     personalityColumn: "extrovertIntrovert",
   },
+  { key: "value" },
   // {
   //   sequenceId: 9,
   //   question: "Are you more attracted: ",

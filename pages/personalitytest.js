@@ -1,18 +1,26 @@
 import testObject from "../data/testObject";
 import { calculate } from "../utils/calculate";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 export default function personalitytest() {
   const [score, setScore] = useState({});
   const [counter, setCounter] = useState(0);
 
-  let calculation;
+  let calculation = null;
+
+  useEffect(() => {}, [calculation]);
 
   //In the future, I might make a result state object to collect the answers to each question "IF", for example, we want to make a graph of his answers to show if he 25% extrovert and 75% introvert. ({1:a, 2:b, ...})
 
   console.log("Score: ", score, counter);
 
   const handleAnswer = (letter, column) => {
+    if (counter === 7) {
+      calculation = calculate(score);
+      console.log("Calculation: ", calculation);
+      return;
+    }
+
     let scoreTemp = score[column] || 0;
 
     if (letter === "a") {
@@ -21,10 +29,6 @@ export default function personalitytest() {
 
     if (letter === "b") {
       setScore({ ...score, [column]: scoreTemp - 1 });
-    }
-
-    if (counter === 73) {
-      calculation = calculate(score);
     }
 
     let counterTemp = counter;
