@@ -1,4 +1,4 @@
-import testObject from "../data/testObject";
+import testArr from "../data/testArr";
 import { calculate } from "../utils/calculate";
 import React, { useState, useEffect } from "react";
 
@@ -34,39 +34,30 @@ export default function personalitytest() {
     setCounter(counterTemp + 1);
   };
 
-  //let currentQuestion = testObject[counter];
-  // let currentColumn = testObject[counter].personalityColumn;
-
   return (
     <div>
-      {testObject[counter].submit ? (
+      {testArr[counter].submit ? (
         <input type="button" value="Submit for testing" />
       ) : (
         <div>
-          <h1>{`${testObject[counter].question}`}</h1>
+          <h1>{`${testArr[counter].question}`}</h1>
           <div>
-            {`a. ${testObject[counter].a}`}
+            {`a. ${testArr[counter].a}`}
             <input
               type="button"
               value="a"
               onClick={(e) =>
-                handleAnswer(
-                  e.target.value,
-                  testObject[counter].personalityColumn
-                )
+                handleAnswer(e.target.value, testArr[counter].personalityColumn)
               }
             ></input>
           </div>
           <div>
-            {`b. ${testObject[counter].b}`}
+            {`b. ${testArr[counter].b}`}
             <input
               type="button"
               value="b"
               onClick={(e) =>
-                handleAnswer(
-                  e.target.value,
-                  testObject[counter].personalityColumn
-                )
+                handleAnswer(e.target.value, testArr[counter].personalityColumn)
               }
             ></input>
           </div>
