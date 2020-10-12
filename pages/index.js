@@ -1,5 +1,9 @@
 import Head from "next/head";
 
+/*
+FYI, client side rendering allows Links to not require a full refresh of the browser. Example, if you click on a "Link" in Nextjs, the browser won't need to fully refresh when directing to another page.
+*/
+
 export default function Home() {
   return (
     <div className="container">
