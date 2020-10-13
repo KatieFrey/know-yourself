@@ -2,6 +2,7 @@ import testArr from "../data/testArr";
 import { calculate } from "../utils/calculate";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Layout from "../components/Layout/Layout";
 
 export default function personalitytest() {
   const [score, setScore] = useState({});
@@ -38,13 +39,15 @@ export default function personalitytest() {
   return (
     <div>
       {testArr[counter].submit ? (
-        <Link>
-          <a>
-            <input type="button" value="Submit for testing" />
-          </a>
-        </Link>
+        <Layout>
+          <Link>
+            <a>
+              <input type="button" value="Submit for testing" />
+            </a>
+          </Link>
+        </Layout>
       ) : (
-        <div>
+        <Layout>
           <h1>{`${testArr[counter].question}`}</h1>
           <div>
             {`a. ${testArr[counter].a}`}
@@ -66,7 +69,7 @@ export default function personalitytest() {
               }
             ></input>
           </div>
-        </div>
+        </Layout>
       )}
     </div>
   );
