@@ -17,3 +17,24 @@ export default function FirstPost() {
     </Layout>
   );
 }
+
+export async function getStaticPaths() {
+  // Return a list of possible value for id
+  // Returns an array that looks like this:
+  // [
+  //   {
+  //     params: {
+  //       id: 'ssg-ssr'
+  //     }
+  //   },
+  //   {
+  //     params: {
+  //       id: 'pre-rendering'
+  //     }
+  //   }
+  // ]
+}
+
+export async function getStaticProps({ params }) {
+  // Fetch necessary data for the blog post using params.id
+}

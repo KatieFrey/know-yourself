@@ -1,10 +1,10 @@
-import testArr from "../data/testArr";
+import testArray from "../data/testArr";
 import { calculate } from "../utils/calculate";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Layout from "../components/Layout/Layout";
 
-export default function personalitytest() {
+export default function personalitytest({ testArr }) {
   const [score, setScore] = useState({});
   const [counter, setCounter] = useState(0);
 
@@ -73,4 +73,14 @@ export default function personalitytest() {
       )}
     </div>
   );
+}
+
+//Maybe pull in testArr through getStaticProps?
+
+export async function getStaticProps() {
+  return {
+    props: {
+      testArr: testArray,
+    },
+  };
 }
