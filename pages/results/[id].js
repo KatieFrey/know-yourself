@@ -2,7 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Layout from "../../components/Layout/Layout";
 
-export default function FirstPost() {
+export default function Result(props) {
   return (
     <Layout>
       <Head>

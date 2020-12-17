@@ -75,7 +75,7 @@ export default function personalitytest({ testArr }) {
   );
 }
 
-//Maybe pull in testArr through getStaticProps?
+//Maybe pull in testArr through getStaticProps? getServerSideProps?
 
 export async function getStaticProps() {
   return {
