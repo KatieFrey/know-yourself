@@ -9,6 +9,7 @@ export default function personalitytest({ testArr }) {
   const [counter, setCounter] = useState(0);
 
   let calculation = null;
+  let title = null;
 
   useEffect(() => {}, [calculation]);
 
@@ -19,6 +20,8 @@ export default function personalitytest({ testArr }) {
   const handleAnswer = (letter, column) => {
     if (counter === 7) {
       calculation = calculate(score);
+      let title = calculation.abr;
+      console.log("Title: ", title);
       console.log("Calculation: ", calculation);
     }
 
@@ -40,7 +43,7 @@ export default function personalitytest({ testArr }) {
     <div>
       {testArr[counter].submit ? (
         <Layout>
-          <Link>
+          <Link href={`/result/${title}`}>
             <a>
               <input type="button" value="Submit for testing" />
             </a>
